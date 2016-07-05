@@ -1,7 +1,6 @@
 package rgeogo
 
 import (
-	"fmt"
 	"math"
 )
 
