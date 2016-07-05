@@ -20,7 +20,13 @@ type (
 		Country    string
 		Region     string
 		City       string
-		PostalCode string
+		PostalCode postalCode
+	}
+
+	postalCode struct {
+		Str string
+		Lat float64
+		Lon float64
 	}
 )
 
@@ -70,10 +76,14 @@ func Setup(dataFolder string) error {
 				geoIndex := encodeUInt64(lat, lon)
 				if geoIndex != -1 {
 					rgeoObject.M[geoIndex] = geo{
-						Country:    strings.Split(file.Name(), ".")[0],
-						Region:     region,
-						City:       city,
-						PostalCode: postal,
+						Country: strings.Split(file.Name(), ".")[0],
+						Region:  region,
+						City:    city,
+						PostalCode: postalCode{
+							Str: postal,
+							Lat: lat,
+							Lon: lon,
+						},
 					}
 				}
 

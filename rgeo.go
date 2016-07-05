@@ -41,7 +41,7 @@ func RGeocode(lat, lon float64, sample int) *geo {
 		}
 	}
 
-	if g, ok := rgeoObject.M[result]; ok && DistanceOnUnitSphere(lat, lon, g.PostalCode.Lat, g.PostalCode.Lon)*Earth_Radius < 50 {
+	if g, ok := rgeoObject.M[result]; ok && DistanceOnUnitSphere(lat, lon, g.PostalCode.Lat, g.PostalCode.Lon)*EarthRadius < 50 {
 		return &g
 	} else {
 		return nil
