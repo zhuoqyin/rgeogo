@@ -15,6 +15,9 @@ var rgeoObject = &rgeo{
 	I: int64Slice{},
 }
 
+// RGeocode reverse geocode the location (lat,lon).
+// sample is the number of candidates during the process
+// 8 would be a recommend value.
 func RGeocode(lat, lon float64, sample int) *geo {
 	if lat >= 90.0 || lat < -90.0 || lon < -180 || lon > 180 {
 		return nil
@@ -47,6 +50,8 @@ func RGeocode(lat, lon float64, sample int) *geo {
 	}
 }
 
+// DistanceOnUnitSphere is a utility function that calculates the distance of 2 points on a Sphere (earth)
+// To get the actual distance, multiply the result by the earth radius.
 func DistanceOnUnitSphere(lat1, long1, lat2, long2 float64) float64 {
 	// phi = 90 - latitude
 	phi1 := (90.0 - lat1) * degreesToRadians

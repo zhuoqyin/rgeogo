@@ -46,6 +46,9 @@ func (s int64Slice) Search(x int64) int {
 	}
 }
 
+// Setup takes the path to a folder contains the data files for the module.
+// Expected input files are csv files named as COUNRY.csv with fields:
+// postal code, lat, lon, city, region
 func Setup(dataFolder string) error {
 	files, err := ioutil.ReadDir(dataFolder)
 	if err != nil {
