@@ -31,7 +31,13 @@ func (s int64Slice) Swap(i, j int)      { s[i], s[j] = s[j], s[i] }
 func (s int64Slice) Less(i, j int) bool { return s[i] < s[j] }
 func (s int64Slice) Sort()              { sort.Sort(s) }
 func (s int64Slice) Search(x int64) int {
-	return sort.Search(len(s), func(i int) bool { return s[i] >= x })
+	index := sort.Search(len(s), func(i int) bool { return s[i] >= x })
+	if index < len(s) {
+		return index
+	} else {
+		// this design is purely for the only use case in the module
+		return 0
+	}
 }
 
 func Setup(dataFolder string) error {

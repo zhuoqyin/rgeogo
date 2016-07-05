@@ -35,7 +35,6 @@ func RGeocode(lat, lon float64, sample int) *geo {
 		latC, lonC := decodeUInt64(uint64(candidate))
 
 		dist := DistanceOnUnitSphere(lat, lon, latC, lonC)
-
 		if dist < minDist {
 			result = candidate
 			minDist = dist
