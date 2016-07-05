@@ -1,7 +1,9 @@
 rgogeo
 -
 
-a reverse geocoding lib in go
+*a reverse geocoding lib in go.
+
+It is highly recommended to fork the repo and modify the data structure to fit your use case. Also the data files provided are not guranteed to be accurate. You are recommended to find better data sources on your own.
 
 #### Install
 ```
