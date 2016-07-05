@@ -1,4 +1,4 @@
-gogeo
+rgogeo
 =====
 
-geo functions in golang
+a reverse geocoding lib in go
