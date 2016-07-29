@@ -1,5 +1,6 @@
 rgeogo
 -
+[![GoDoc](https://godoc.org/github.com/zhuoqyin/rgeogo?status.svg)](https://godoc.org/github.com/zhuoqyin/rgeogo)
 
 * a reverse geocoding lib in go.
 
@@ -34,6 +35,3 @@ func main() {
 	fmt.Println(rgeogo.RGeocode(LAT, LON, 8))
 }
 ```
-
-#### GoDoc
-https://godoc.org/github.com/frankyin1019/rgeogo
