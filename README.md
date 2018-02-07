@@ -26,7 +26,7 @@ To feed in the data:
 ```
 import (
 	"fmt"
-	"github.com/frankyin1019/rgeogo"
+	"github.com/zhuoqyin/rgeogo"
 ) 
 
 func main() {
