@@ -8,7 +8,7 @@ It is highly recommended to fork the repo and modify the data structure to fit y
 
 #### Install
 ```
-go get github.com/frankyin1019/rgeogo
+go get github.com/zhuoqyin/rgeogo
 ```
 
 #### Format of data files
